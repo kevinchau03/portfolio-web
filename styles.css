@@ -8,6 +8,7 @@ html, body {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  background-color:rgb(73, 73, 253);
 }
 button {
     background-color: transparent;
@@ -26,7 +27,7 @@ a {
       transform: translateX(-10px);
     }
     50% {
-      transform: translateX(10px);
+      transform: translateX(8px);
     }
     100% {
       transform: translateX(-10px);
@@ -39,7 +40,7 @@ button a i {
     animation-iteration-count: infinite;
 }
 #start {
-	height: 60vh;		
+	height: 100vh;		
 	position: relative;	
 	background-image: url('init_bg.png');
   /* Create the parallax scrolling effect */
@@ -55,8 +56,23 @@ button a i {
   justify-content: center;
 }
 .title {
-    color: rgb(75, 134, 244);
-    font-size: 80px;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  margin-top: 16%;
+  color: rgb(75, 134, 244);
+  font-size: 80px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+.continue-button {
+  margin-top: 5%;
+}
+
+#inventory {
+  height: 100vh;		
+	position: relative;	
+	background-image: url('init_bg.png');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
