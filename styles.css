@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&display=swap');
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: #18122B;
+}
+button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+}
+@keyframes hand-animation {
+    0% {
+      transform: translateX(-10px);
+    }
+    50% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(-10px);
+    }
+  }
+  
+button a i {
+    animation-name: hand-animation;
+    animation-duration: 1.55s;
+    animation-iteration-count: infinite;
+}
+.start-screen {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.title {
+    color: white;
+    font-size: 110px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
