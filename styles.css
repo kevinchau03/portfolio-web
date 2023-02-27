@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@500&family=Oxygen&display=swap');
 
-body, input, textarea, button {
+body, input, textarea, button, b {
   font-family: 'Karla', sans-serif;
   font-family: 'Oxygen', sans-serif;
 }
@@ -27,7 +27,7 @@ a {
       transform: translateX(-10px);
     }
     50% {
-      transform: translateX(8px);
+      transform: translateX(2px);
     }
     100% {
       transform: translateX(-10px);
@@ -39,15 +39,23 @@ button a i {
     animation-duration: 1.55s;
     animation-iteration-count: infinite;
 }
+
 #start {
 	height: 100vh;		
 	position: relative;	
-	background-image: url('init_bg.png');
+	background-image: url('landscape.gif');
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+a {
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
 }
 .start-screen {
   display: flex;
@@ -57,12 +65,22 @@ button a i {
 }
 .title {
   margin-top: 16%;
-  color: rgb(75, 134, 244);
+  color: rgb(255, 255, 255);
   font-size: 80px;
   font-weight: bold;
-  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+  text-shadow: 
+    -2px -2px 0 #000,  
+    2px -2px 0 #000,
+    -2px 2px 0 #000,
+    2px 2px 0 #000;
+  }
+.subtitle {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
 }
-.continue-button {
+.continue-button-start {
   margin-top: 5%;
 }
 
@@ -76,3 +94,109 @@ button a i {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.inventory-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  justify-content: center;
+}
+
+.card {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 600px;
+  perspective: 655px;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .content {
+  transform: rotateY( 180deg ) ;
+  transition: transform 0.5s;
+}
+
+.front,
+.back {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  border: 3.5px solid black;
+  background-image: url(./card.jpg);
+  border-radius: 5%;
+  color: #ffffff;
+  text-align: center;
+  backface-visibility: hidden;
+}
+
+.back {
+  background: #03446A;
+  color: white;
+  transform: rotateY( 180deg );
+}
+
+.continue-button {
+  margin-top: 2%;
+}
+
+.portrait {
+  max-width: 80%;
+  max-height: 80%;
+  border: 3.5px solid black;
+  border-radius: 5%;
+}
+@media screen and (max-width: 620px) {
+  .card-desc {
+    font-size: 17px;
+  }
+  .card {
+    width: 250px;
+    height: 450px;
+    perspective: 655px;
+  }
+.portrait {
+  max-width: 60%;
+  min-width: 60%;
+  border: 3.5px solid black;
+  border-radius: 5%;
+}
+}
+/* Progress Bars */
+.progress {
+  border: 1px solid #B0B0B0;
+  width: 100%;
+  border: 3.5px solid black;
+  border-radius: 4px;
+  box-shadow: 0 0 3px #B0B0;
+  backdrop-filter: blur(2px) brightness(101%);
+}
+
+.bar {
+  width: 50%;
+  background: rgb(22, 223, 22);
+  box-shadow: inset 0px 12px 1.7px #FFFFFF33;
+  border-radius: 3px;
+  color: white;
+  text-align: center;
+}
+.bar.full {
+  background: rgb(35, 153, 226);
+  width: 25%;
+}
+.bar.sonita {
+  background: rgb(255, 32, 32);
+  width: 100%;
+}
+
