@@ -43,12 +43,7 @@ button a i {
 #start {
 	height: 100vh;		
 	position: relative;	
-	background-image: url('landscape.gif');
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	background-image: url('./images/landscape.gif');
 }
 a {
   text-shadow: 
@@ -66,7 +61,7 @@ a {
 .title {
   margin-top: 16%;
   color: rgb(255, 255, 255);
-  font-size: 80px;
+  font-size: 100px;
   font-weight: bold;
   text-shadow: 
     -2px -2px 0 #000,  
@@ -82,12 +77,13 @@ a {
 }
 .continue-button-start {
   margin-top: 5%;
+  font-size: 50px;
 }
 
 #inventory {
   height: 100vh;		
 	position: relative;	
-	background-image: url('init_bg.png');
+	background-image: url(./images/landscape2.gif);
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
@@ -134,7 +130,7 @@ a {
   padding-left: 10%;
   padding-right: 10%;
   border: 3.5px solid black;
-  background-image: url(./card.jpg);
+  background-image: url(./images/card.jpg);
   border-radius: 5%;
   color: #ffffff;
   text-align: center;
@@ -157,13 +153,13 @@ a {
   border: 3.5px solid black;
   border-radius: 5%;
 }
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 1050px) {
   .card-desc {
     font-size: 17px;
   }
   .card {
-    width: 250px;
-    height: 450px;
+    width: 200px;
+    height: 400px;
     perspective: 655px;
   }
 .portrait {
