@@ -44,6 +44,10 @@ button a i {
 	height: 100vh;		
 	position: relative;	
 	background-image: url('./images/landscape.gif');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover
 }
 a {
   text-shadow: 
@@ -83,12 +87,7 @@ a {
 #inventory {
   height: 100vh;		
 	position: relative;	
-	background-image: url(./images/landscape2.gif);
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: linear-gradient(45deg, #a4ace4,#544bcc, #647cd4,#642cb4);
 }
 
 .inventory-screen {
