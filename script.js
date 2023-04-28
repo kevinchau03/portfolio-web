@@ -2,7 +2,7 @@ window.addEventListener('scroll', function() {
   const landingContainer = document.querySelector('.landing-container');
   const landingScreenHeight = document.querySelector('.landing-screen').offsetHeight;
   const scrollTop = window.scrollY;
-  if (scrollTop > landingScreenHeight / 3) {
+  if (scrollTop > landingScreenHeight / 4) {
     landingContainer.classList.add('hidden');
     landingContainer.classList.remove('active');
   } else {
