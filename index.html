@@ -8,24 +8,45 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Heebo&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
+
         <!-- Landing Screen-->
         <section class="landing-screen" id="landing">
-            <div class="landing-container">
-                <h1>Hey There, my name is Kevin Chau</h1>
-                <button class="info-button">Contact Me</button>
+            <div class="animate__animated animate__slideInLeft landing-container">
+                <h1 class="title" >I'm an aspiring <span style="
+                background: linear-gradient(to right, #ff33da, #5833ff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                    ">Software Engineer.</span></h1>
+                <p class="subtitle" >
+                    Hi, my name is Kevin Chau and I am a third year Computer Science student at the University of Western Ontario.
+                </p>
+                <i class="fa-brands fa-github fa-2xl" style="color: #0033ff;"></i>
+                <i class="fa-brands fa-linkedin fa-2xl" style="color: #0033ff;"></i>
+                <i class="fa-brands fa-instagram fa-2xl" style="color: #0033ff;"></i>
             </div>
+            <img class ="floating" src="./images/portrait.JPG" alt="headshot">
         </section>
+
+        <!-- Projects Screen -->
         <section class="projects-screen" id="projects">
-            <div class="projects-container">
-                <h1>Project</h1>
+            <div class="carousel-container">
+                <div class="item-container">
+                    <h2>AnimeBuddy</h2>
+                    <p>A chrome extension that helps users to keep track of their favourite anime.</p>
+                </div>
+                <a class="prev" onclick="prevSlide()">❮</a>
+                <a class="next" onclick="nextSlide()">❯</a>
             </div>
         </section>
+
+        <!-- Skill Screen -->
         <section class="skills-screen" id=""skills>
             <div class="skills-container">
-                <h1>I am good at Python</h1>
+                <h1>LOL</h1>
             </div>
         </section>
     </body>
