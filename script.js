@@ -1,17 +1,12 @@
-function reveal() {
-  var reveals = document.querySelectorAll(".reveal");
-  for (var i = 0; i < reveals.length; i++) {
-    var windowHeight = window.innerHeight;
-    var elementTop = reveals[i].getBoundingClientRect().top;
-    var elementVisible = 150;
-    if (elementTop < windowHeight - elementVisible) {
-      reveals[i].classList.add("active");
-    } else {
-      reveals[i].classList.remove("active");
-    }
+window.addEventListener('scroll', function() {
+  const landingContainer = document.querySelector('.landing-container');
+  const landingScreenHeight = document.querySelector('.landing-screen').offsetHeight;
+  const scrollTop = window.scrollY;
+  if (scrollTop > landingScreenHeight / 3) {
+    landingContainer.classList.add('hidden');
+    landingContainer.classList.remove('active');
+  } else {
+    landingContainer.classList.remove('hidden');
+    landingContainer.classList.add('active');
   }
-}
-window.addEventListener("scroll", reveal);
-
-// To check the scroll position on page load
-reveal();
+});
