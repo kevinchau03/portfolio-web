@@ -6,6 +6,10 @@ body {
 p {
   color: rgb(152, 146, 146);
 }
+a {
+  color: inherit; /* This will set the text color to the color inherited from its parent */
+  text-decoration: none; /* This will remove the underline */
+  }
 .landing-screen {
   display: flex;
   height: 100vh;
@@ -43,16 +47,9 @@ p {
   justify-content: center;
   height: 100vh;
 }
-.carousel-container { 
-  width: 800px;
-  height: 400px;
-  background-color:rgb(27, 37, 82);
-  border-radius: 15px;
-}
 .title {
   font-size: 45px;
 }
-
 .floating { 
   animation-name: floating;
   animation-duration: 3s;
@@ -63,25 +60,27 @@ p {
   border-radius: 60%;
   border: 3px solid white;
 }
-
 @keyframes floating {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 10px); }
   100%   { transform: translate(0, -0px); }   
 }
-
+.projects-screen {
+  display: flex;
+}
 .item-container {
   display: flex;
+  width: 80vh;
+  background-color: #27176b;
+  padding: 2%;
+  border-radius: 20px;
 }
 .info-card {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50vh;
-  max-height: 400;
-  border: solid white;
-
+  height: 400px;
 }
 .item-container.active {
   animation-duration: 1s;
@@ -100,8 +99,4 @@ p {
   align-items: center;
   justify-content: center;
   gap: 40px;
-}
-a {
-color: inherit; /* This will set the text color to the color inherited from its parent */
-text-decoration: none; /* This will remove the underline */
 }
