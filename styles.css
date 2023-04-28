@@ -1,7 +1,10 @@
 body {
   font-family: 'Heebo', sans-serif;
-  background-color: rgb(17, 22, 44);
+  background-color: rgb(17, 22, 41);
   color: white;
+}
+p {
+  color: rgb(152, 146, 146);
 }
 .landing-screen {
   display: flex;
@@ -41,8 +44,8 @@ body {
   height: 100vh;
 }
 .carousel-container { 
-  max-width: 800px;
-  max-height: 400px;
+  width: 800px;
+  height: 400px;
   background-color:rgb(27, 37, 82);
   border-radius: 15px;
 }
@@ -65,4 +68,40 @@ body {
   0% { transform: translate(0,  0px); }
   50%  { transform: translate(0, 10px); }
   100%   { transform: translate(0, -0px); }   
+}
+
+.item-container {
+  display: flex;
+}
+.info-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50vh;
+  max-height: 400;
+  border: solid white;
+
+}
+.item-container.active {
+  animation-duration: 1s;
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+}
+.item-container.hidden {
+  animation-duration: 1s;
+  animation-name: fadeOutDown;
+  animation-fill-mode: both;
+}
+
+.skills-screen {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+a {
+color: inherit; /* This will set the text color to the color inherited from its parent */
+text-decoration: none; /* This will remove the underline */
 }
