@@ -15,7 +15,13 @@ window.addEventListener('scroll', function() {
   const itemContainer = document.querySelector('.item-container');
   const projectsScreenHeight = document.querySelector('.projects-screen').offsetHeight;
   const scrollTop = window.scrollY;
-  if (scrollTop < projectsScreenHeight / 2) {
+  const halfProjectsScreen = projectsScreenHeight / 2;
+  const scrollPastProjectsScreen = scrollTop - projectsScreenHeight;
+
+  if (scrollTop < halfProjectsScreen) {
+    itemContainer.classList.add('hidden');
+    itemContainer.classList.remove('active');
+  } else if (scrollPastProjectsScreen > halfProjectsScreen) {
     itemContainer.classList.add('hidden');
     itemContainer.classList.remove('active');
   } else {
@@ -23,3 +29,5 @@ window.addEventListener('scroll', function() {
     itemContainer.classList.add('active');
   }
 });
+
+

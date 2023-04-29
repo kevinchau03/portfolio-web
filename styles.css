@@ -10,6 +10,7 @@ a {
   color: inherit; /* This will set the text color to the color inherited from its parent */
   text-decoration: none; /* This will remove the underline */
   }
+
 .landing-screen {
   display: flex;
   height: 100vh;
@@ -32,24 +33,10 @@ a {
   animation-fill-mode: both;
 }
 
-.info-button {
-  width: 150px;
-  height: 40px;
-  border-radius: 10px;
-  border: solid black;
-  background-color: white;
-  cursor: pointer;
-  color: #181c29;
-}
-.projects-screen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-}
 .title {
   font-size: 45px;
 }
+
 .floating { 
   animation-name: floating;
   animation-duration: 3s;
@@ -65,23 +52,55 @@ a {
   50%  { transform: translate(0, 10px); }
   100%   { transform: translate(0, -0px); }   
 }
+
+.projects-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  height: 100vh;
+}
 .projects-screen {
   display: flex;
 }
 .item-container {
-  display: flex;
-  width: 80vh;
-  background-color: #27176b;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  grid-template-rows: 1fr, 1fr, 1fr;
+  grid-template-columns: 1fr, 1fr;
+  width: 90vh;
+  background-color: rgb(35, 44, 84);
   padding: 2%;
+  grid-gap: 10px;
   border-radius: 20px;
 }
-.info-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
+.proj-image {
+  grid-row-start: 1;
+  grid-column-start: 2;
+  grid-row-end: 4;
+  grid-column-end: 3;
 }
+.info-title {
+  margin-top: 35%;
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-row-end: 2;
+  grid-column-end: 2;
+}
+.info-desc {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-row-end: 3;
+  grid-column-end: 2;
+}
+.info-tech {
+  grid-row-start: 3;
+  grid-column-start: 1;
+  grid-row-end: 4;
+  grid-column-end: 2;
+}
+
 .item-container.active {
   animation-duration: 1s;
   animation-name: fadeInUp;
