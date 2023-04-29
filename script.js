@@ -12,13 +12,11 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-  const itemContainers = document.querySelectorAll('.item-container');
+  const itemContainer = document.querySelector('.item-container');
   const projectsScreenHeight = document.querySelector('.projects-screen').offsetHeight;
   const scrollTop = window.scrollY;
   const halfProjectsScreen = projectsScreenHeight / 2;
   const scrollPastProjectsScreen = scrollTop - projectsScreenHeight;
-
-  itemContainers.forEach(function(itemContainer) {
     if (scrollTop < halfProjectsScreen) {
       itemContainer.classList.add('hidden');
       itemContainer.classList.remove('active');
@@ -29,7 +27,6 @@ window.addEventListener('scroll', function() {
       itemContainer.classList.remove('hidden');
       itemContainer.classList.add('active');
     }
-  });
 });
 
 
