@@ -12,7 +12,7 @@ window.addEventListener('scroll', function() {
 });
 
 window.addEventListener('scroll', function() {
-  const itemContainer = document.querySelector('.item-container');
+  const itemContainer = document.querySelector('.projects-container');
   const projectsScreenHeight = document.querySelector('.projects-screen').offsetHeight;
   const scrollTop = window.scrollY;
   const halfProjectsScreen = projectsScreenHeight / 2;
