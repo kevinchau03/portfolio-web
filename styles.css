@@ -17,25 +17,26 @@ a {
   height: 100vh;
   align-items: center;
   justify-content: center;
-  gap: 40px;
 }
 .landing-container {
-  width: 80vh;
+  width: 30vw;
 }
 .name {
   line-height: 1.3;
 }
 .landing-container.active {
-  animation-duration: 1.1s;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+  animation-duration: 0.7s;
   animation-name: slideInLeft;
   animation-fill-mode: both;
 }
 .landing-container.hidden {
-  animation-duration: 1.1s;
+  animation-duration: 0.7s;
   animation-name: slideOutRight;
   animation-fill-mode: both;
   opacity: 0;
-  transition: opacity 1.1s ease-in-out;
+  transition: opacity 0.7s ease-in-out;
 }
 
 .title {
@@ -54,13 +55,14 @@ a {
 }
 @keyframes floating {
   0% { transform: translate(0,  0px); }
-  50%  { transform: translate(0, 30px); }
+  50%  { transform: translate(0, 15px); }
   100%   { transform: translate(0, -0px); }   
 }
 
 .projects-screen {
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 .top {
   text-align: center;
@@ -110,12 +112,62 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100vw;
   height: 100vh;
+  gap: 100px;
 }
 .about-container {
-  display: flex;
-  width: 80vh;
-  height: 20vh;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  align-items: center;
+  width: 40%;
+  height: 30%;
   background-color: #24272b;
   border-radius: 30px;
+  padding: 2%;
+  gap: 10%;
+}
+.description-container {
+  grid-column: 1;
+}
+.stats-container {
+  grid-column: 2;
+}
+.container {
+  background-color: rgb(192, 192, 192);
+  width: 80%;
+  border-radius: 15px;
+}
+.skill {
+  background-color: #00aaff;
+  color: white;
+  padding: 1%;
+  text-align: right;
+  border-radius: 15px;
+}
+.full {
+  width: 80%;
+}
+.design {
+  width: 50%;
+}
+.button {
+  width: 200px;
+  height: 40px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  background-color: #00aaff;
+  cursor: pointer;
+}
+.headshot {
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 60%;
+  border: 3px solid rgb(255, 255, 255);
+}
+
+.contact {
+  height: 100vh;
 }
