@@ -29,4 +29,3 @@ window.addEventListener('scroll', function() {
     }
 });
 
-
