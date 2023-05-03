@@ -1,6 +1,6 @@
 body {
   font-family: 'Jost', sans-serif;
-  background-color: #141515;
+  background: linear-gradient(360deg,#6dafed, #2a50a3);
   color: rgb(255, 255, 255);
   overflow-x: hidden;
 }
@@ -64,11 +64,6 @@ a {
 .top {
   text-align: center;
   font-size: 40px;
-  background: linear-gradient(#46ffe0, #00aaff);
-  background-clip: padding-box;	
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 10%;
   margin-bottom: 5%;
 }
 .projects-container {
@@ -84,35 +79,32 @@ a {
   justify-items: center;
   align-items: center;
   width: 300px;
-  background-color: #ffffff;
+  background-color: #2a50a3;
   padding: 2%;
   border-radius: 20px;
   flex-shrink: 0;
-  color: black;
 }
 
 .projects-container.active {
   animation-duration: 0.7s;
-  animation-name: slideInUp;
+  animation-name: fadeInUp;
   animation-fill-mode: both;
   opacity: 1;
   transition: opacity 0.7s ease-in-out;
 }
 .projects-container.hidden {
   animation-duration: 0.7s;
-  animation-name: slideOutDown;
+  animation-name: fadeOutDown;
   animation-fill-mode: both;
-  opacity: 0;
-  transition: opacity 0.7s ease-in-out;
 }
 
 .experience-screen {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
-  gap: 100px;
+  gap: 10%;
 }
 .about-container {
   display: grid;
@@ -120,11 +112,24 @@ a {
   align-items: center;
   width: 40%;
   height: 28%;
-  background-color: #ffffff;
-  color: black;
+  background-color: #2a50a3;
   border-radius: 30px;
   padding: 1.75%;
   gap: 5%;
+}
+.about-container.active {
+  animation-duration: 0.7s;
+  animation-name: zoomIn;
+  animation-fill-mode: both;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+}
+.about-container.hidden {
+  animation-duration: 0.7s;
+  animation-name: zoomOut;
+  animation-fill-mode: both;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
 }
 .description-container {
   grid-column: 1;
@@ -133,12 +138,13 @@ a {
   grid-column: 2;
 }
 .container {
-  background-color: rgb(192, 192, 192);
+  background-color: #6dafed;
   width: 80%;
   border-radius: 15px;
 }
 .skill {
-  background-color: #00aaff;
+  background-color: white;
+  height: 10px;
   color: white;
   padding: 1%;
   text-align: right;
@@ -158,14 +164,23 @@ a {
   color: white;
   font-weight: bold;
   background-color: #00aaff;
-  margin-top: 20%;
   cursor: pointer;
 }
-.headshot {
-  max-width: 200px;
-  max-height: 200px;
-  border-radius: 60%;
-  border: 3px solid rgb(255, 255, 255);
+.icons {
+  display: flex;
+  gap: 10%;
+}
+.icon-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 0px;
+}
+.logo {
+  grid-column:1;
+}
+.facts {
+  grid-column:2;
 }
 
 .contact {
