@@ -104,7 +104,6 @@ a {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  gap: 10%;
 }
 .about-container {
   display: grid;
@@ -116,6 +115,7 @@ a {
   border-radius: 30px;
   padding: 1.75%;
   gap: 5%;
+  margin-bottom: 5%;
 }
 .about-container.active {
   animation-duration: 0.7s;
