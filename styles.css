@@ -234,10 +234,6 @@ a {
     flex-direction: column;
   }
   .icons {
-    flex-wrap: wrap;
-    flex-basis: 25%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    max-width: 25%;  
+    display: block;
   }
 }
