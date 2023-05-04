@@ -233,4 +233,11 @@ a {
   .projects-container {
     flex-direction: column;
   }
+  .icons {
+    flex-wrap: wrap;
+    flex-basis: 25%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 25%;  
+  }
 }
