@@ -1,11 +1,14 @@
+html {
+  scroll-behavior: smooth;
+ }
+
 body {
   font-family: 'Jost', sans-serif;
-  background: linear-gradient(360deg,#6dafed, #2a50a3);
   color: rgb(255, 255, 255);
   overflow-x: hidden;
+  background-color: #1c2437;
 }
 a {
-  color: inherit; /* This will set the text color to the color inherited from its parent */
   text-decoration: none; /* This will remove the underline */
 }
 
@@ -24,30 +27,27 @@ a {
 
 .landing-screen {
   display: flex;
-  height: 100vh;
-  width: 100vw;
   align-items: center;
   justify-content: center;
+  height: 100vh;
 }
 .landing-container {
   width: 30vw;
 }
+.land-button {
+  display: block;
+  width: 115px;
+  height: 25px;
+  background: #A2B2EE;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  line-height: 25px;
+}
 .name {
   line-height: 1.2;
-}
-.landing-container.active {
-  opacity: 1;
-  transition: opacity 0.7s ease-in-out;
-  animation-duration: 0.7s;
-  animation-name: slideInLeft;
-  animation-fill-mode: both;
-}
-.landing-container.hidden {
-  animation-duration: 0.7s;
-  animation-name: slideOutRight;
-  animation-fill-mode: both;
-  opacity: 0;
-  transition: opacity 0.7s ease-in-out;
 }
 
 .title {
@@ -70,55 +70,16 @@ a {
   100%   { transform: translate(0, -0px); }   
 }
 
-.projects-screen {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-}
-.top {
-  text-align: center;
-  font-size: 40px;
-  margin-bottom: 5%;
-  margin-top: 5%;
-}
-.projects-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  margin-bottom: 10%;
-}
-.item-container {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  width: 300px;
-  background-color: #2a50a3;
-  padding: 2%;
-  border-radius: 20px;
-  flex-shrink: 0;
-}
-
-.projects-container.active {
-  animation-duration: 0.7s;
-  animation-name: fadeInUp;
-  animation-fill-mode: both;
-  opacity: 1;
-  transition: opacity 0.7s ease-in-out;
-}
-.projects-container.hidden {
-  animation-duration: 0.7s;
-  animation-name: fadeOutDown;
-  animation-fill-mode: both;
-}
-
 .experience-screen {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
+}
+.top {
+  font-size: 55px;
 }
 .about-container {
   display: grid;
@@ -126,25 +87,11 @@ a {
   align-items: center;
   width: 40%;
   height: 28%;
-  background-color: #2a50a3;
-  border-radius: 30px;
+  background-color: #5f7ADB;
+  border-radius: 5px;
   padding: 1.75%;
   gap: 5%;
   margin-bottom: 5%;
-}
-.about-container.active {
-  animation-duration: 0.7s;
-  animation-name: zoomIn;
-  animation-fill-mode: both;
-  opacity: 1;
-  transition: opacity 0.7s ease-in-out;
-}
-.about-container.hidden {
-  animation-duration: 0.7s;
-  animation-name: zoomOut;
-  animation-fill-mode: both;
-  opacity: 0;
-  transition: opacity 0.7s ease-in-out;
 }
 .description-container {
   grid-column: 1;
@@ -152,13 +99,13 @@ a {
 .stats-container {
   grid-column: 2;
 }
-.container {
+.scontainer {
   background-color: #ffffff;
   width: 80%;
   border-radius: 15px;
 }
 .skill {
-  background-color: #00aaff;
+  background-color: #A2B2EE;
   height: 10px;
   color: white;
   padding: 1%;
@@ -174,11 +121,11 @@ a {
 .button {
   width: 200px;
   height: 40px;
-  border-radius: 30px;
+  border-radius: 5px;
   border: none;
   color: white;
   font-weight: bold;
-  background-color: #00aaff;
+  background-color: #A2B2EE;
   cursor: pointer;
 }
 .icons {
@@ -197,43 +144,75 @@ a {
 .facts {
   grid-column:2;
 }
-@media only screen and (max-width: 768px) {
-  .about-container {
-    width: 90%;
-    font-size: 12px;
-  }
+
+.projects-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
-@media only screen and (max-width: 768px){
-  .landing-screen {
-    gap: 40px;
-  }
-  .name-top {
-    font-size: 15px;
-  }
-  .name-middle {
-    font-size: 54px;
-  }
-  .name-bot {
-    font-size: 15px;
-  }
-  .landing-container {
-    width: 30%;
-  }
-  .floating {
-    width: 200px;
-    height: 200px;
-  }
+.info-card {
+  background-color: #5f7ADB;
+  color: white;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px; /* Adjust width as needed */
 }
 
-@media only screen and (max-width: 768px) {
-  .projects-screen {
-    height: auto;
-  }
-  .projects-container {
-    flex-direction: column;
-  }
-  .icons {
-    display: block;
-  }
+.product-name {
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+
+.product-description {
+  font-size: 16px;
+  margin: 0 0 20px;
+}
+
+.product-button {
+  display: inline-block;
+  background-color: #A2B2EE;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+
+.hidden {
+  opacity: 0;
+}
+.landing-container.active {
+  opacity: 1;
+  animation-duration: 0.9s;
+  animation-name: heartBeat;
+  animation-fill-mode: both;
+  transition: opacity 0.9s ease-in-out;
+}
+.experience-screen.active {
+  opacity: 1;
+  animation-duration: 0.9s;
+  animation-name: slideInLeft;
+  animation-fill-mode: both;
+  transition: opacity 0.9s ease-in-out;
+}
+.projects-container.active {
+  opacity: 1;
+  animation-duration: 0.9s;
+  animation-name: slideInDown;
+  animation-fill-mode: both;
+  transition: opacity 0.9s ease-in-out;
 }

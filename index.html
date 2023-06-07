@@ -3,39 +3,35 @@
     <head>
         <title>Kevin's Coding Portfolio</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/95cd6f825f.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Mukta&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="styles.css">
-        <script src="./script.js"></script>
+        <script defer src="./script.js"></script>
     </head>
     
     <body> 
         <!-- Landing Screen-->
         <section class="landing-screen" id="landing">
-            <div class="landing-container active">
+            <div class="landing-container hidden">
                 <h1 class="name">
                     <span class='name-top'>Hello! My name is</span>
                     <br>
                     <span class='name-middle'>Kevin Chau</span>
                     <br>
-                    <span class='name-bot'>An aspiring Software Engineer.</span>
+                    <span class='name-bot'>A Software Engineer.</span>
                 </h1>
-                <div class="links">
-                    <a href="https://github.com/kevinchau03" target="_blank"><i class="fa-brands fa-github fa-2xl" style="color: #00aaff;"></i></a>
-                    <a href="http://www.linkedin.com/in/kevin-chau03/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #00aaff;"></i></a>
-                    <a href="https://www.instagram.com/kevin.chau03/" target="_blank"><i class="fa-brands fa-instagram fa-2xl" style="color: #00aaff;"></i></a>
-                </div>
+                <a href=#experience class="land-button">Continue</a>
             </div>
             <img class ="floating" src="./images/portrait.JPG" alt="headshot">
         </section>
 
-        <section class="experience-screen" id="experience">
+        <section class="experience-screen hidden" id="experience">
             <h2 class="top">About Me</h2>
-            <div class="about-container active">
+            <div class="about-container">
                 <div class="description-container">
                     <p class="desc">I am a third year Computer Science student studying at Western University in London, Ontario. I am currently seeking a tech internship and look to provide my learning mindset to any job.</p>
                     <a href="./images/animeBuddy.png" download>
@@ -44,68 +40,68 @@
                 </div>
                 <div class="stats-container">
                         <p>Web Development</p>
-                        <div class="container">
+                        <div class="scontainer">
                             <div class="skill full"></div>
                         </div>
                         <p>Data Structures and Algorithms</p>
-                        <div class="container">
+                        <div class="scontainer">
                             <div class="skill design"></div>
                         </div>
                         <p>Game Development</p>
-                        <div class="container">
+                        <div class="scontainer">
                             <div class="skill design"></div>
                         </div>
                 </div>
             </div>
             <div class="icons">
-                <div class="icon-box">
-                    <img class="logo" src="./images/icons8-project-60.png"/>
-                    <p class="facts"><span style="font-size: xx-large; font-weight: bold;">5</span><br>Projects Complete</p>
+                <div class="icon-box animate__animated animate__fadeInLeft">
+                  <img class="logo" src="./images/icons8-project-60.png" />
+                  <p class="facts"><span style="font-size: xx-large; font-weight: bold;">5</span><br>Projects Complete</p>
                 </div>
-                <div class="icon-box">
-                    <img class="logo" src="./images/icons8-basketball-60.png">
-                    <p class="facts"><span style="font-size: xx-large; font-weight: bold;">1234</span><br>Basket's Made</p>
+                <div class="icon-box animate__animated animate__fadeInLeft animate__delay-1s">
+                  <img class="logo" src="./images/icons8-basketball-60.png">
+                  <p class="facts"><span style="font-size: xx-large; font-weight: bold;">1234</span><br>Basket's Made</p>
                 </div>
-                <div class="icon-box">
-                    <img class="logo" src="./images/icons8-ai-60.png"/> 
-                    <p class="facts"><span style="font-size: xx-large; font-weight: bold;">132</span><br>Prompts Engineered</p>
+                <div class="icon-box animate__animated animate__fadeInLeft animate__delay-2s">
+                  <img class="logo" src="./images/icons8-ai-60.png" />
+                  <p class="facts"><span style="font-size: xx-large; font-weight: bold;">132</span><br>Prompts Engineered</p>
                 </div>
-                <div class="icon-box">
-                    <img class="logo" src="./images/icons8-school-60.png"/> 
-                    <p class="facts"><span style="font-size: xx-large; font-weight: bold;">2</span><br>Year of School</p>
+                <div class="icon-box animate__animated animate__fadeInLeft animate__delay-3s">
+                  <img class="logo" src="./images/icons8-school-60.png" />
+                  <p class="facts"><span style="font-size: xx-large; font-weight: bold;">2</span><br>Year of School</p>
                 </div>
-            </div>
+              </div>
+            <a href="#projects">Scroll Down</a>
         </section>
 
         <!-- Projects Screen -->
         <section class="projects-screen" id="projects">
             <h2 class="top">My Project Portfolio</h2>
-            <div class="projects-container active">
-                <div class="item-container">
-                    <div class="info-card">
-                        <h1 class="info-title"><b>Anime Buddy 📺</b></h1>
-                        <p class="info-desc">A chrome extension that helps users to keep track of their favourite anime.</p>
-                        <h4 class="info-tech">Technologies Used: JavaScript, React, Axios, Animate.css, RapidAPI</h4>
-                        <a class="info-tech" href="https://github.com/kevinchau03/AnimeBuddy" target="_blank"><i class="fa-brands fa-github fa-2xl"style="color: #00aaff;"></i>View Code</a>
-                    </div>
-                </div>
-                <div class="item-container">
-                        <div class="info-card">
-                            <h1 class="info-title"><b>Western GIS 🗺️</b></h1>
-                            <p class="info-desc">A Java application meant for students and staff of Western University to navigate around campus.</p>
-                            <h4 class="info-tech">Technologies Used: Java, JSwing</h3>
-                            <a class="info-tech" href="https://github.com/kevinchau03/AnimeBuddy" target="_blank"><i class="fa-brands fa-github fa-2xl"style="color: #00aaff;"></i>View Code</a>
-                        </div>
-                </div>
-                <div class="item-container">
-                    <div class="info-card">
-                        <h1 class="info-title"><b>Western AI 💻<i class="fa-regular fa-brain-circuit" style="color: #00aaff;"></i></b></h1>
-                        <p class="info-desc">A Website used to connect members of Western AI together.</p>
-                        <h4 class="info-tech">Technologies Used: HTML, CSS, JavaScript, BootStrap</h3>
-                        <a class="info-tech" href="https://github.com/kevinchau03/AnimeBuddy" target="_blank"><i class="fa-brands fa-github fa-2xl"style="color: #00aaff;"></i>View Code</a>
-                    </div>
-                </div>
+            <div class="projects-container hidden">
+                <div class="info-card">
+                    <h2 class="product-name">Western AI</h2>
+                    <p class="product-description">Club Website to connect both internal and external club members together. </p>
+                    <a href="#" class="product-button">View Code</a>
+                </div>  
+                <div class="info-card">
+                    <h2 class="product-name">Anime Buddy</h2>
+                    <p class="product-description">A chrome extension used to help users keep track of their favourite shows/movies.</p>
+                    <a href="#" class="product-button">View Code</a>
+                </div>       
+                <div class="info-card">
+                    <h2 class="product-name">Anime Buddy</h2>
+                    <p class="product-description">A chrome extension used to help users keep track of their favourite shows/movies.</p>
+                    <a href="#" class="product-button">View Code</a>
+                </div>                     
             </div>
         </section>
+
+        <section class="contact-screen" id="contact">
+            <h2 class="top">Let Us Connect!</h2>
+            <div class="contact-container">
+                
+            </div>
+        </section>
+
     </body>
 </html>
